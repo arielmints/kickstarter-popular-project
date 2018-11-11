@@ -29,5 +29,5 @@ The commaned you need to schedule is scrapy's crawl command
 scrapy crawl kickstarter
 ```
 
-This will run the server on localhost:8080
+This will run the server on localhost:PORT
 
