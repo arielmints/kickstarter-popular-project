@@ -20,7 +20,7 @@ manage.py migrate
 ```
 manage.py runserver PORT
 ```
-This will run the server on localhost:PORT, you can now enter this address in your browser and watch the UI with the pre built DB.
+This will run the server on localhost:PORT, you can now enter http://localhost:8080/projects/ in your browser and watch the UI with the pre built DB.
 
 ### Set scheduled task for scrapping every hour
 
