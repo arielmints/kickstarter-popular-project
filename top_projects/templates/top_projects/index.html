@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+    <head>
+        <title>Welcome to KickStarter Top Projects View!</title>
+    </head>
+    <body>
+        <h1 style="margin-top: 10px;" class="ui centered header">Welcome to KickStarter Top Projects View!</h1>
+        <div style="padding: 15px;">
+            <div class="ui fluid styled accordion">
+                {% for row in top_projects %}
+                    <div class='{% if forloop.counter == 1 %}active{% endif %} title'>
+                      <i class="dropdown icon"></i>
+                      {% if forloop.counter == 1 %}
+                        Current Most Popular KickStarter Projects
+                      {% else %}  
+                        {{ row.date }}
+                      {% endif %}  
+                      
+                    </div>
+                    <div class='{% if forloop.counter == 1 %}active{% endif %} content' >
+                      <p class="transition hidden">
+                        <div class="ui cards">
+                            {% for project in row.json %}
+                                <div class="ui card">
+                                    <div class="image">
+                                      <img src={{project.thumbnail}} />
+                                    </div>
+                                    <div class="content">
+                                      <a class="header">{{ project.name }}</a>
+                                      <div class="meta">
+                                        <span class="date">{{ project.money_raised }} {{ project.currency }} Raised</span>
+                                      </div>
+                                    </div>
+                                    <div class="extra content">
+                                      <a>
+                                        <i class="user icon"></i>
+                                        {{ project.backers }} Backers
+                                      </a>
+                                    </div>
+                                </div>
+                            {% endfor %}    
+                        </div>        
+                      </p>   
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+        <link rel="stylesheet" type="text/css" href="{% static 'top_projects/semantic.css' %}" />
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="{% static 'top_projects/semantic.js' %}"></script>
+        <script type="text/javascript">
+              $(document).ready(function(){
+                $('.ui.accordion').accordion();
+             });
+        </script>
+    </body>
+</html>
