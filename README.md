@@ -20,6 +20,7 @@ manage.py migrate
 ```
 manage.py runserver PORT
 ```
+This will run the server on localhost:PORT, you can now enter this address with your browser and watch the UI with the pre built DB.
 
 ### Set scheduled task for scrapping every hour
 
@@ -29,5 +30,5 @@ The commaned you need to schedule is scrapy's crawl command
 scrapy crawl kickstarter
 ```
 
-This will run the server on localhost:PORT
+
 
