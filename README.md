@@ -7,14 +7,6 @@ This project is a home project mission - A KickStarter popular projects view.
 
 Before running the project, please install the dependencies as they appear in the requirements.txt file.
 
-### Migrate DB
-
-To create the db with the right table, run django migration in the main project folder
-
-```
-manage.py migrate
-```
-
 ### Run Django server with your favorite PORT
 
 ```
