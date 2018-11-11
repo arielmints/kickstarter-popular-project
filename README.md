@@ -7,15 +7,27 @@ This project is a home project mission - A KickStarter popular projects view.
 
 Before running the project, please install the dependencies as they appear in the requirements.txt file.
 
+### Migrate DB
 
+To create the db with the right table, run django migration in the main project folder
+
+```
+manage.py migrate
+```
+
+### Run Django server with your favorite PORT
+
+```
+manage.py runserver PORT
+```
 
 ### Set scheduled task for scrapping every hour
 
-The commaned that you need to schedule is the scrapy crawl command
+The commaned you need to schedule is scrapy's crawl command
 
 ```
 scrapy crawl kickstarter
 ```
 
-This will run a server on localhost:8080
+This will run the server on localhost:8080
 
